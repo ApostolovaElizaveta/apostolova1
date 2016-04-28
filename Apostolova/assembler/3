@@ -1,0 +1,7 @@
+call start
+date: db 17
+month: db 5
+start:
+mov a,[date]
+mov b,[month]
+add a,b

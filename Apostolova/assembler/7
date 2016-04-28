@@ -1,0 +1,114 @@
+mov a,5
+cmp a,5
+
+ja abcd
+
+push a
+mov d,232
+add a,48
+mov [d],a
+add d,1
+mov a,33
+mov [d],a
+mov a,61
+add d,1
+mov [d],a
+pop a
+push a
+cmp a,0
+je gh
+
+pop a
+abc:
+push a
+add a,48
+inc d
+mov [d],a
+o:
+mov b,42
+inc d
+dec a
+cmp a,47
+je qwe
+
+cmp a,48
+je ozz
+mov [d],b
+
+
+
+inc d
+mov [d],a
+cmp a,49
+ja o
+ozz:
+qwe:
+mov b,61
+mov d,252
+mov [d],b
+
+pop a
+call ge
+
+
+ge:
+
+mov c,a
+run:
+sub c,1
+cmp c,0
+je gg
+mul c
+ja run 
+gg: 
+
+
+call bb
+
+bb:
+push a
+div 100
+add a,48
+mov d,253
+mov [d],a
+sub a,48
+mul 100
+mov b,a
+pop a
+sub a,b
+
+push a
+div 10
+add a,48
+add d,1
+mov [d],a
+sub a,48
+mul 10
+mov b,a
+pop a
+sub a,b
+push a
+add d,1
+
+add a,48
+mov [d],a
+
+hlt
+gh:
+mov a,1
+jmp abc
+abcd:
+jmp start
+er:
+db "error"
+db 0
+start:
+mov c,er
+mov d,232
+run1:
+mov a,[c]
+mov [d],a
+inc c
+inc d
+cmp b,[c]
+jnz run1
