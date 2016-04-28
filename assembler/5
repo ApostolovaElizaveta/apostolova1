@@ -1,0 +1,31 @@
+mov a,0 ; число на входе
+call g
+hlt
+g:
+push a
+div 100
+add a,48
+mov d,232
+mov [d],a
+sub a,48
+mul 100
+mov b,a
+pop a
+sub a,b
+
+push a
+div 10
+add a,48
+add d,1
+mov [d],a
+sub a,48
+mul 10
+mov b,a
+pop a
+sub a,b
+
+push a
+add d,1
+add a,48
+mov [d],a
+ret

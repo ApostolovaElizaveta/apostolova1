@@ -1,0 +1,18 @@
+mov a,4 ;число на входе <6
+call g
+hlt
+g:
+cmp a,0
+je u
+mov c,a
+run:
+sub c,1
+cmp c,0
+je gg
+mul c
+ja run
+gg:
+ret
+u: 
+mov a,1
+call g

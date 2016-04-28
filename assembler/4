@@ -1,0 +1,14 @@
+jmp start
+date:
+db "17/05"
+db 0
+start:
+mov c,date
+mov d,232
+run:
+mov a,[c]
+mov [d],a
+inc c
+inc d
+cmp b,[c]
+jnz run
